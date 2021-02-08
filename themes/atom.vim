@@ -1,0 +1,2 @@
+colors atom
+set termguicolors
