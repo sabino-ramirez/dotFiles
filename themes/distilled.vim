@@ -1,2 +1,0 @@
-colorscheme distilled
-set termguicolors
