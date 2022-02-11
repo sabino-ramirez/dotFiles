@@ -37,12 +37,11 @@ terminal = guess_terminal()
 keys = [
 
     # spawns
-    Key([mod], "f", lazy.spawn("brave")),
+    Key([mod], "f", lazy.spawn("firefox")),
     Key([mod], "e", lazy.spawn("eclipse")),
     Key([mod], "o", lazy.spawn("code")),
     Key([mod], "p", lazy.spawn("spotify")),
-    Key([mod], "s", lazy.spawn("systemsettings5")),
-    Key([mod], "g", lazy.spawn("dolphin")),
+    Key([mod], "g", lazy.spawn("thunar")),
     Key([mod], "m", lazy.spawn("discord")),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
