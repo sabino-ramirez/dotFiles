@@ -37,8 +37,9 @@ terminal = guess_terminal()
 keys = [
 
     # spawns
-    Key([mod], "f", lazy.spawn("firefox")),
-    Key([mod], "e", lazy.spawn("eclipse")),
+    Key([mod], "f", lazy.spawn("brave")),
+    Key([mod], "y", lazy.spawn("firefox")),
+    Key([mod], "e", lazy.spawn("irfanview")),
     Key([mod], "o", lazy.spawn("code")),
     Key([mod], "p", lazy.spawn("spotify")),
     Key([mod], "g", lazy.spawn("thunar")),
@@ -131,7 +132,7 @@ layouts = [
          fair=False,
          grow_amount=2,
          lower_right=False,
-         margin=3,
+         margin=8,
          name='bsp'
      ),
     # layout.Matrix(),
@@ -200,6 +201,8 @@ screens = [
             ],
             17,
         ),
+        # wallpaper='~/Desktop/q2.png',
+        # wallpaper_mode='fill',
     ),
 ]
 
