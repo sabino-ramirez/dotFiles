@@ -1,0 +1,48 @@
+#!/bin/sh
+# my aliases
+alias t='tree -LC 1'
+alias tt='tree -LC 2'
+alias ttt='tree -LC 3'
+
+alias g='cd /home/sabino'
+alias c='clear'
+alias r='rm -rfv'
+alias v='nvim'
+alias v.='nvim .'
+alias ide='/home/sabino/ide.sh'
+
+alias nvc='nvim /home/sabino/.config/nvim'
+alias alac='nvim /home/sabino/.config/alacritty/alacritty.yml'
+alias muxconf='nvim /home/sabino/.config/tmux/'
+alias zconf='nvim /home/sabino/.config/zsh/'
+alias oh='nvim /home/sabino/.config/zsh/zsh-aliases'
+alias ex='source /home/sabino/.config/zsh/.zshrc'
+alias configs='nvim ~/.config'
+alias tuts='cd /home/sabino/tutorials'
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# For when keys break
+alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+
+case "$(uname -s)" in
+
+Darwin)
+	# echo 'Mac OS X'
+	alias ls='ls -G'
+	;;
+
+Linux)
+	alias ls='ls --color=auto'
+	;;
+
+CYGWIN* | MINGW32* | MSYS* | MINGW*)
+	# echo 'MS Windows'
+	;;
+*)
+	# echo 'Other OS'
+	;;
+esac
