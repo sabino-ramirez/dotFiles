@@ -1,24 +1,35 @@
 #!/bin/sh
 # my aliases
 alias t='tree -LC 1'
+alias ta='tree -LCa 1'
 alias tt='tree -LC 2'
 alias ttt='tree -LC 3'
 
 alias g='cd /home/sabino'
 alias c='clear'
 alias r='rm -rfv'
-alias v='nvim'
-alias v.='nvim .'
+alias v='lvim'
+alias v.='lvim .'
 alias ide='/home/sabino/ide.sh'
 
-alias nvc='nvim /home/sabino/.config/nvim'
-alias alac='nvim /home/sabino/.config/alacritty/alacritty.yml'
-alias muxconf='nvim /home/sabino/.config/tmux/'
-alias zconf='nvim /home/sabino/.config/zsh/'
-alias oh='nvim /home/sabino/.config/zsh/zsh-aliases'
+alias nvc='lvim /home/sabino/.config/lvim'
+alias alac='lvim /home/sabino/.config/alacritty/alacritty.yml'
+alias muxconf='lvim /home/sabino/.config/tmux/'
+alias zconf='lvim /home/sabino/.config/zsh/'
+alias powerlineconfig='lvim /home/sabino/.config/powerline/'
+alias oh='lvim /home/sabino/.config/zsh/zsh-aliases'
 alias ex='source /home/sabino/.config/zsh/.zshrc'
-alias configs='nvim ~/.config'
+alias configs='lvim ~/.config'
 alias tuts='cd /home/sabino/tutorials'
+
+alias postman='./Downloads/Postman/Postman'
+
+# git commands
+alias gs='git status'
+alias gadd='git add'
+alias gcom='git commit'
+alias gpush='git push -u origin master'
+alias gpull='git pull'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -28,21 +39,21 @@ alias fgrep='fgrep --color=auto'
 # For when keys break
 alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
 
-case "$(uname -s)" in
+# case "$(uname -s)" in
 
-Darwin)
-	# echo 'Mac OS X'
-	alias ls='ls -G'
-	;;
+# Darwin)
+# 	# echo 'Mac OS X'
+# 	alias ls='ls -G'
+# 	;;
 
-Linux)
-	alias ls='ls --color=auto'
-	;;
+# Linux)
+# 	alias ls='ls --color=auto'
+# 	;;
 
-CYGWIN* | MINGW32* | MSYS* | MINGW*)
-	# echo 'MS Windows'
-	;;
-*)
-	# echo 'Other OS'
-	;;
-esac
+# CYGWIN* | MINGW32* | MSYS* | MINGW*)
+# 	# echo 'MS Windows'
+# 	;;
+# *)
+# 	# echo 'Other OS'
+# 	;;
+# esac
