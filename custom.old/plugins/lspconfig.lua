@@ -3,7 +3,7 @@
 local utils = require "core.utils"
 
 local lspconfig = require "lspconfig"
-local servers = { "gopls", "pyright" }
+local servers = { "gopls" }
 
 local on_attach = function(client, bufnr)
   if vim.g.vim_version > 7 then
