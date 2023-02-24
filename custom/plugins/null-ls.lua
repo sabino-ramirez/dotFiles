@@ -16,6 +16,10 @@ local b = null_ls.builtins
 
 local sources = {
 
+  -- go
+  b.diagnostics.golangci_lint,
+  b.formatting.golines,
+
   -- typescript
   b.formatting.prettier,
 

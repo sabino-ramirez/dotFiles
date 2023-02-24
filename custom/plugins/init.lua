@@ -2,6 +2,7 @@ local customConfigs = require "custom.plugins.configs"
 
 return {
   -- install plugins
+  ["fladson/vim-kitty"] = {},
   ["windwp/nvim-ts-autotag"] = {},
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
@@ -21,7 +22,7 @@ return {
   ["goolord/alpha-nvim"] = {
     disable = false,
   },
-  ["kyazdani42/nvim-tree.lua"] = customConfigs.nvimtree,
+  -- ["kyazdani42/nvim-tree.lua"] = customConfigs.nvimtree,
   ["williamboman/mason.nvim"] = customConfigs.mason,
 
   -- override core plugin conf
