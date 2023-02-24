@@ -1,1 +1,0 @@
-Machfiles/zsh/.zshrc
