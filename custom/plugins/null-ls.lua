@@ -26,6 +26,7 @@ local sources = {
   -- python
   b.formatting.black,
   -- b.formatting.autopep8,
+  b.diagnostics.flake8,
 
   -- Lua
   b.formatting.stylua,

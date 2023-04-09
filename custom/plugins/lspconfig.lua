@@ -21,32 +21,50 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.svelte.setup {
-  on_attach = my_on_attach,
-  capabilities = capabilities,
+-- lspconfig.svelte.setup {
+--   on_attach = my_on_attach,
+--   capabilities = capabilities,
+--
+--   cmd = { "svelteserver", "--stdio" },
+--   filetypes = { "svelte" },
+--   root_dir = util.root_pattern("package.json", ".git"),
+-- }
 
-  cmd = { "svelteserver", "--stdio" },
-  filetypes = { "svelte" },
-  root_dir = util.root_pattern("package.json", ".git"),
-}
+-- lspconfig.pylsp.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--
+--   cmd = { "pylsp" },
+--   filetypes = { "python" },
+--   single_file_support = true,
+-- }
 
-lspconfig.pyright.setup {
+lspconfig.jedi_language_server.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 
-  cmd = { "pyright-langserver", "--stdio" },
+  cmd = { "jedi-language-server" },
   filetypes = { "python" },
-  -- root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-  settings = {
-    python = {
-      autosearchPaths = true,
-      diagnosticMode = "workspace",
-      useLibraryCodeForTypes = true,
-    },
-  },
-
   single_file_support = true,
 }
+
+-- lspconfig.pyright.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--
+--   cmd = { "pyright-langserver", "--stdio" },
+--   filetypes = { "python" },
+--   -- root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+--   settings = {
+--     python = {
+--       autosearchPaths = true,
+--       diagnosticMode = "workspace",
+--       useLibraryCodeForTypes = true,
+--     },
+--   },
+--
+--   single_file_support = true,
+-- }
 
 lspconfig.gopls.setup {
   on_attach = my_on_attach,
